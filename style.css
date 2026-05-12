@@ -1,0 +1,33 @@
+body{
+    font-family: Arial, sans-serif;
+    background:#111827;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    background:#1f2937;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+}
+
+button{
+    padding:10px 20px;
+    margin-top:10px;
+    cursor:pointer;
+}
+
+img{
+    margin-top:20px;
+    max-width:100%;
+}
+
+a{
+    display:block;
+    margin-top:20px;
+    color:cyan;
+}
