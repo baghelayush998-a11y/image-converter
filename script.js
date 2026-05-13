@@ -47,3 +47,29 @@ function convertImage(){
 
     img.src = uploadedImage;
 }
+function compressImage() {
+    if(!uploadedImage){
+        alert("Please upload image first");
+        return;
+    }
+
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
+
+    const img = new Image();
+
+    img.onload = function(){
+        canvas.width = img.width;
+        canvas.height = img.height;
+
+        ctx.drawImage(img,0,0);
+
+        const compressed = canvas.toDataURL("image/jpeg", 0.5);
+
+        preview.src = compressed;
+        downloadBtn.href = compressed;
+        downloadBtn.download = "compressed-image.jpg";
+    }
+
+    img.src = uploadedImage;
+}
