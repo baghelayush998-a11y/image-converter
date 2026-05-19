@@ -1,33 +1,107 @@
-body{
-    font-family: Arial, sans-serif;
-    background:#111827;
-    color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
+
+body{
+background:black;
+color:white;
+overflow-x:hidden;
+}
+
+/* Background Glow */
+
+body::before{
+content:'';
+position:fixed;
+width:350px;
+height:350px;
+background:cyan;
+filter:blur(140px);
+opacity:0.18;
+top:-100px;
+left:-100px;
+z-index:-1;
+}
+
+body::after{
+content:'';
+position:fixed;
+width:350px;
+height:350px;
+background:purple;
+filter:blur(140px);
+opacity:0.18;
+bottom:-100px;
+right:-100px;
+z-index:-1;
+}
+
+/* Main Container */
 
 .container{
-    background:#1f2937;
-    padding:20px;
-    border-radius:10px;
-    text-align:center;
+width:90%;
+max-width:450px;
+margin:40px auto;
+padding:30px;
+background:rgba(255,255,255,0.05);
+border-radius:28px;
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,0.1);
+box-shadow:0 0 40px rgba(0,255,255,0.2);
+text-align:center;
 }
+
+/* Heading */
+
+h1{
+font-size:40px;
+color:cyan;
+text-shadow:0 0 20px cyan;
+}
+
+.made{
+margin-top:10px;
+font-size:15px;
+opacity:0.8;
+}
+
+/* Upload */
+
+input{
+margin-top:25px;
+width:100%;
+padding:15px;
+border-radius:15px;
+background:#111;
+border:1px solid cyan;
+color:white;
+}
+
+/* Button */
 
 button{
-    padding:10px 20px;
-    margin-top:10px;
-    cursor:pointer;
+margin-top:25px;
+width:100%;
+padding:16px;
+border:none;
+border-radius:18px;
+background:linear-gradient(90deg,cyan,purple);
+color:white;
+font-size:18px;
+font-weight:bold;
+box-shadow:0 0 20px rgba(0,255,255,0.4);
 }
+
+/* Image */
 
 img{
-    margin-top:20px;
-    max-width:100%;
-}
-
-a{
-    display:block;
-    margin-top:20px;
-    color:cyan;
+width:100%;
+margin-top:25px;
+border-radius:20px;
+box-shadow:0 0 25px rgba(0,255,255,0.3);
 }
