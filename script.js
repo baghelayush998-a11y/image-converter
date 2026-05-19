@@ -73,3 +73,29 @@ function compressImage() {
 
     img.src = uploadedImage;
 }
+const downloadBtn =
+document.getElementById("downloadBtn");
+
+downloadBtn.addEventListener(
+"click",
+()=>{
+
+const image =
+document.querySelector("img");
+
+if(!image){
+alert("Upload image first");
+return;
+}
+
+const a =
+document.createElement("a");
+
+a.href=image.src;
+
+a.download="converted-image";
+
+a.click();
+
+}
+);
