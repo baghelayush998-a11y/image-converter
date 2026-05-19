@@ -99,3 +99,42 @@ a.click();
 
 }
 );
+const fileInput =
+document.querySelector("input");
+
+const preview =
+document.querySelector("img");
+
+const convertBtn =
+document.querySelector("button");
+
+convertBtn.addEventListener(
+"click",
+()=>{
+
+if(!fileInput.files[0]){
+
+alert("Upload image first");
+
+return;
+
+}
+
+const file =
+fileInput.files[0];
+
+const reader =
+new FileReader();
+
+reader.onload=function(e){
+
+preview.src=e.target.result;
+
+alert("Image Ready ✅");
+
+};
+
+reader.readAsDataURL(file);
+
+}
+);
